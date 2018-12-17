@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks: 
+    - ping:
+      tags: foo
+    - name: create a file
+      file:
+        path: /root/saur
+        state: directory
+      tags: boo

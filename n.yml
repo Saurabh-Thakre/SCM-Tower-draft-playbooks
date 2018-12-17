@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: Playbook n.yml tasks1
+      file:
+        path: /root/sa
+        state: directory    
+      tags: bar
+    - name: playbook n.yml task2
+      file:
+        path: /root/s
+        state: directory
+      tags: bar1   

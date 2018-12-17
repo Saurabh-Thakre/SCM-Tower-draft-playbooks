@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - debug:
+        msg: Play1
+- name: Include a play 
+  import_playbook: ping.yml
+- name: Include another play  
+  import_playbook: n.yml
