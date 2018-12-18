@@ -1,1 +1,1 @@
-echo $1 >> /home/ec2-user/saurabh.txt
+echo $1 >> /tmp/saurabh.txt
