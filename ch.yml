@@ -1,0 +1,18 @@
+--- 
+- hosts: win
+  tasks: 
+    - debug: 
+        msg: Play1
+
+- import_playbook: ping1.yml
+  vars: 
+    ansible_connection: winrm
+    ansible_port: 5986
+    ansible_user: Administrator
+    ansible_password: Cool96sau@
+    ansible_winrm_server_cert_validation: ignore
+  
+
+
+
+
