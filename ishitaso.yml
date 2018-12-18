@@ -3,4 +3,4 @@
     - abc: abc
   tasks:
     - name: Test Script
-      script: "/root/saurabh/sc.sh {{ abc }}"
+      script: "sc.sh {{ abc }}"
