@@ -5,6 +5,6 @@
       tags: foo
     - name: create a file
       file:
-        path: /root/saur
+        path: /home/ec2-user/sa
         state: directory
       tags: boo
