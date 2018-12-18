@@ -1,0 +1,6 @@
+- hosts: dev
+  vars:
+    - abc: abc
+  tasks:
+    - name: Test Script
+      script: "/root/saurabh/sc.sh {{ abc }}"
