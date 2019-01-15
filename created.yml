@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: Creates directory
+      file:
+        path: /tmp/saurabh
+        state: directory
