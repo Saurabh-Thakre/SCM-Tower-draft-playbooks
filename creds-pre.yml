@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: Lets test it
+      debug:
+        msg: "{{tower_git_dienst_username}}"
