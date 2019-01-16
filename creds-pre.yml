@@ -4,3 +4,6 @@
     - name: Lets test it
       debug:
         msg: "{{tower_git_dienst_username}}"
+    - name: Testing with extra vars
+      debug:
+        msg: "{{tower_git_dienst_ssh_private_key}}"
