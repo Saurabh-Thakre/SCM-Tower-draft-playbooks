@@ -16,7 +16,7 @@
      - name: Clearing old repository files if any..
 #       command: cp -r "{{ git_location }}/{{ env }}/ncp_{{ tier }}/" "{{ destination }}"
        copy:
-         src: "{{ git_location }}"
+         src: "{{ git_location }}/"
          dest: "{{ destination }}"
          remote_src: no
 #         mode: "preserve"
