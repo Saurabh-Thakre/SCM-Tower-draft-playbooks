@@ -8,7 +8,7 @@
     project: ng2
     tier: app
     version: "1.2.1"
-    git_location : "/tmp/{{ project }}-{{ tier }}-{{ env }}-{{ version }}"
+    git_location : "/opt/{{ project }}-{{ tier }}-{{ env }}-{{ version }}"
     destination: "/app/opt/deployment/config/"
 
   tasks:
