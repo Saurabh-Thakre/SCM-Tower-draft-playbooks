@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+   - name: Tower Config Backup Initiated. 
+     command: "/root/ansible-tower-setup-bundle-3.4.0-2.el7/setup.sh -b"
