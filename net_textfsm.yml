@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  tasks:
+   - name: Set Path
+     shell: export NET_TEXTFSM=./ntc-templates/templates
+     delegate_to: localhost
+   - name: Call the Py Script
+     command: "echo $NET_TEXTFSM"
+     register: Health
+     ignore_errors: True
+     delegate_to: localhost
+   - name: debug
+     debug:
+       msg: "{{Health}}"
