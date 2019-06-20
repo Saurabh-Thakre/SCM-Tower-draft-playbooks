@@ -1,0 +1,12 @@
+- name: Check for required scripts path
+  hosts: all
+  become: true
+  become_method: dzdo
+  become_user: root
+  tasks:
+   - name: check if path is present
+     stat: 
+      path: "/etc/saurabh"
+     register: req_path
+   - debug:
+      var: req_path
