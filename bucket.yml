@@ -1,0 +1,11 @@
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: s3 test
+      aws_s3:
+        bucket: ocp-wapp-promoted-images-laba
+        object: "tower_test.txt"
+        src: "/tmp/files/tower_test.txt"
+        mode: put
+        permission: private
+        region: eu-west-1
