@@ -1,6 +1,5 @@
 ---
 - hosts: stage
-  connection: local
   become: true
   tasks:
      - file:
@@ -11,4 +10,4 @@
 - hosts: win
   gather_facts: false
   tasks:
-    - win_ping
+    - win_ping:
