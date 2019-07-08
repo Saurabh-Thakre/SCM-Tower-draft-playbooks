@@ -12,6 +12,4 @@
 - hosts: win
   gather_facts: false
   tasks:
-    - win_file:
-        path: C:\Temp\foo.conf
-        state: touch
+    - win_ping
