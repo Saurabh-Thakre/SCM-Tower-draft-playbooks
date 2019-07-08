@@ -7,8 +7,6 @@
          state: touch
          mode: 0777
 
-
-
 - hosts: win
   gather_facts: false
   tasks:
