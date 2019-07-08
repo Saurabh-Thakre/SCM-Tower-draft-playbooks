@@ -1,6 +1,8 @@
 ---
 - hosts: stage
   become: true
+  ansible_user: '{{Node_username}}'
+  ansible_password: '{{Node_password}}'
   tasks:
      - file:
          path: /tmp/test5.txt
