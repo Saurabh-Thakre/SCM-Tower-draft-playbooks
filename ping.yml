@@ -2,9 +2,4 @@
 - hosts: all
   tasks: 
     - ping:
-      tags: foo
-    - name: create a file
-      file:
-        path: /home/ec2-user/sa
-        state: directory
-      tags: boo
+     
