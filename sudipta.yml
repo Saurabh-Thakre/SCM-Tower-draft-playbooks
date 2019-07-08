@@ -1,5 +1,6 @@
 ---
 - hosts: stage
+  connection: local
   become: true
   tasks:
      - file:
