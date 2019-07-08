@@ -1,0 +1,17 @@
+---
+- hosts: stage
+  become: true
+  tasks:
+     - file:
+         path: /tmp/test5.txt
+         state: touch
+         mode: 0777
+
+
+
+- hosts: win
+  gather_facts: false
+  tasks:
+    - win_file:
+        path: C:\Temp\foo.conf
+        state: touch
