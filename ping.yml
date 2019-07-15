@@ -1,11 +1,4 @@
 ---
 - hosts: all
-  remote_user: "{{some_env_username}}"
   tasks: 
     - ping:
-   
-    - name: debug
-      debug:
-        var: "{{Node_password}}" 
-     
-     
