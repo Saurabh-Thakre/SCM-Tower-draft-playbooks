@@ -2,4 +2,4 @@
 - hosts: localhost
   tasks:
      - name: Trying to Run a script from git
-       script: sc.sh
+       script: .sc.sh
