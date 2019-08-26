@@ -1,1 +1,1 @@
-echo $1 >> /tmp/saurabh.txt
+echo "Saurabh" >> /tmp/saurabh.txt
