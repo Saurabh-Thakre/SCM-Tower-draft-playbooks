@@ -1,14 +1,13 @@
 ---
 - hosts: localhost
   gather_facts: no
-  remote_user: root
   become: yes
   become_user: root
   tasks:
     - name: copy the impossible
       copy:
-        src: "/home/ec2-user/.ssh/id_rsa"
-        dest: "/home/ec2-user/.ssh/authorized_keys"
+        src: "/tmp/saurabh"
+        dest: "/tmp/"
         owner: root
         group: root
         mode: 0600
