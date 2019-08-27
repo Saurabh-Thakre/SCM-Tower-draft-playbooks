@@ -1,10 +1,10 @@
 ---
-- hosts: localhost
+- hosts: all
   become: true
   gather_facts: no
   tasks: 
     - name: Setup | private key upload
       copy: 
-       src: "/home/ec2-user/.ssh/id_rsa"
+       src: "/home/ec2-user/
        dest: '/tmp/sa'
        mode: 0700
