@@ -7,4 +7,4 @@
        src: "/home/ec2-user/id_rsa"
        dest: '/tmp/sa'
        mode: 0700
-       remote_src: yes
+       remote_src: no
