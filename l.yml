@@ -4,7 +4,7 @@
   tasks: 
     - name: Setup | private key upload
       copy: 
-       src: "/home/ec2-user/id_rsa"
+       src: "/tmp/saurabh"
        dest: '/tmp/sa'
        mode: 0700
        remote_src: no
