@@ -8,6 +8,8 @@
       copy:
         src: "{{ lookup('file', '/home/ec2-user/.ssh/id_rsa') }}"
         dest: "/home/ec2-user/.ssh/authorized_keys"
+        owner: root
+        group: root
         mode: 0600
         
 
