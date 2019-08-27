@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+    - name: copy the impossible
+      copy:
+        src: "{{ lookup('file', '/home/ec2-user/.ssh/id_rsa') }}"
+        dest: "/home/ec2-user/.ssh/authorized_keys"
+        mode: 0600
+
+
