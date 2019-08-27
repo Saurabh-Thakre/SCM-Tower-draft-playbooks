@@ -6,7 +6,7 @@
   tasks:
     - name: copy the impossible
       copy:
-        src: "/home/ec2-user/.ssh/id_rsa"
+        src: "{{ lookup('file', '/home/ec2-user/.ssh/id_rsa') }}"
         dest: "/home/ec2-user/.ssh/authorized_keys"
         mode: 0600
         
