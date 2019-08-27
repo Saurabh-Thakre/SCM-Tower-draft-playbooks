@@ -7,4 +7,3 @@
        src: "/tmp/saurabh"
        dest: '/tmp/sa'
        mode: 0700
-       remote_src: no
