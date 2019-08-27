@@ -1,8 +1,6 @@
 ---
 - hosts: localhost
   gather_facts: no
-  become: "yes"
-  become_user: root
   tasks: 
     - name: Setup | private key upload
       copy: 
