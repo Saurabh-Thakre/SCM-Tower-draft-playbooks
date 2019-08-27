@@ -3,7 +3,7 @@
   gather_facts: no
   tasks: 
     - name: Setup | private key upload
-      template: 
+      copy: 
        src: "/tmp/saurabh"
        dest: '/tmp/sa'
        mode: 0700
