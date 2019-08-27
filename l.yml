@@ -4,6 +4,6 @@
   tasks: 
     - name: Setup | private key upload
       copy: 
-       src: "/tmp/saurabh"
+       src: "{{ lookup('file', '/home/ec2-user/.ssh/id_rsa') }}"
        dest: '/tmp/sa'
        mode: 0700
