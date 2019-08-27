@@ -8,6 +8,6 @@
         mode: 0600
         become: true
         become_method: su
-        become:user: root
+        become_user: root
 
 
