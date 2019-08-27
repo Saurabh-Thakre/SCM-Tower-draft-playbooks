@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   gather_facts: no
+  remote_user: root
   become: yes
   become_method: su
   become_user: root
