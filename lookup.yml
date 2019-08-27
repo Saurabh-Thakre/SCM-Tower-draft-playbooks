@@ -6,5 +6,8 @@
         src: "{{ lookup('file', '/home/ec2-user/.ssh/id_rsa') }}"
         dest: "/home/ec2-user/.ssh/authorized_keys"
         mode: 0600
+        become: true
+        become_method: su
+        become:user: root
 
 
