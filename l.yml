@@ -1,9 +1,9 @@
 ---
 - hosts: all
   gather_facts: no
+  become: yes
   tasks: 
     - name: Setup | private key upload
-      copy: 
-       src: "/tmp/s"
-       dest: '/test'
-       mode: 0700
+      unarchive: 
+       src: "https://repo.continuum.io/archive/.winzip/Anaconda2-2019.07-Windows-x86.zip"
+       dest: "/test"
