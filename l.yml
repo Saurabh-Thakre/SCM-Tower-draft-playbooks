@@ -3,8 +3,9 @@
   gather_facts: no
   become: yes
   tasks: 
-    - name: Setup | private key upload
-      unarchive: 
-       src: "http://infynexus/nexus/repository/SonarDev/sonarqube-7.9.1.zip"
-       dest: "/test"
-       remote_src: yes
+    - name : test
+      file:
+        path: /test/saurabh
+        owner: root
+        group: root
+        mode: '1777'
