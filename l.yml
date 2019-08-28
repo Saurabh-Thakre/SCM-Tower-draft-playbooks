@@ -7,3 +7,4 @@
       unarchive: 
        src: "https://repo.continuum.io/archive/.winzip/Anaconda2-2019.07-Windows-x86.zip"
        dest: "/test"
+       remote_src: yes
