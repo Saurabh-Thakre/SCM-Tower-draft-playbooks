@@ -5,5 +5,5 @@
     - name: Setup | private key upload
       copy: 
        src: "/tmp/s"
-       dest: '/tmp/sa'
+       dest: '/test'
        mode: 0700
