@@ -4,6 +4,6 @@
   tasks: 
     - name: Setup | private key upload
       copy: 
-       src: "/home/ec2-user/.ssh/id_rsa"
+       src: "/tmp/s"
        dest: '/tmp/sa'
        mode: 0700
