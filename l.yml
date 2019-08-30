@@ -7,3 +7,4 @@
       git:
        repo: 'https://github.com/Saurabh-Thakre/mygit.git'
        dest: /tmp/touch/sam
+       delegate_to: localhost
