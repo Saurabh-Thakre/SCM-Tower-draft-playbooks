@@ -6,4 +6,4 @@
     - name : test
       git:
        repo: 'https://github.com/Saurabh-Thakre/mygit/copy.txt'
-       dest: /tmp
+       dest: /tmp/touch
