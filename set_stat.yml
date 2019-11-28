@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: using set_stat module
+      set_stats:
+        data: 
+          foo: bar
