@@ -1,5 +1,7 @@
 ---
 - hosts: all
-  become: yes
-  become_user: root
-  ping:
+  tasks:
+   - name: saurabh
+     become: yes
+     become_user: root
+     ping:
