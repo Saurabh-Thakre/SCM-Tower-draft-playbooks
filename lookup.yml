@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   gather_facts: no
-   tasks:
+  tasks:
     - name: copy the impossible
       copy:
         src: "/tmp/saurabh"
