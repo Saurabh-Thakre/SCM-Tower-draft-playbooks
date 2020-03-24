@@ -1,16 +1,11 @@
 ---
 - hosts: localhost
   gather_facts: no
-  become: yes
-  become_user: root
-  tasks:
+   tasks:
     - name: copy the impossible
       copy:
         src: "/tmp/saurabh"
         dest: "/tmp/"
-        owner: root
-        group: root
-        mode: 0600
-        
+
 
 
