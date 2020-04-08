@@ -1,9 +1,10 @@
 ---
 - hosts: all
   tasks:
-    - set_fact: myvar={{ listvar | from_json }}
+    - set_fact:
+        myvar: "{{ hostname | from_json }}"
 
     - debug:
-        msg: "{{ item['hostname'] }}"
+        msg: "{{ hostname] }}"
       with_items: "{{ myvar }}"
                         
