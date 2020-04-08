@@ -11,14 +11,3 @@
     - debug:
         msg: saurabhthakre
       when: epic | bool
- 
-
- 
- 
- 
- #- set_fact:
- #      myvar: "{{ hostname | from_json }}"
- #       
- #   - debug:
- #       msg: "{{ hostname }}"
- #     with_items: "{{ myvar }}"
