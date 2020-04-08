@@ -7,6 +7,3 @@
     - debug:
         msg: "{{ hostname }}"
       with_items: "{{ myvar }}"
-                        
-set_fact:
-      test_bool : "{{  test_bool_flag|bool }}"
