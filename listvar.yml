@@ -1,9 +1,24 @@
 ---
 - hosts: all
+  vars:
+    epic: true
+    monumental: "yes"
+  
   tasks:
-    - set_fact:
-        myvar: "{{ hostname | from_json }}"
-        
+    - shell: echo "This certainly is '{{epic}}'!"
+      when: epic or monumental|bool 
+
     - debug:
-        msg: "{{ hostname }}"
-      with_items: "{{ myvar }}"
+        msg: saurabhthakre
+     when: epic | bool
+ 
+
+ 
+ 
+ 
+ #- set_fact:
+ #      myvar: "{{ hostname | from_json }}"
+ #       
+ #   - debug:
+ #       msg: "{{ hostname }}"
+ #     with_items: "{{ myvar }}"
