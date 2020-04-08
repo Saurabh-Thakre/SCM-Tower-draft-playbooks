@@ -2,12 +2,8 @@
 - hosts: all
   vars:
     epic: true
-    monumental: "yes"
-  
-  tasks:
-    - shell: echo "This certainly is '{{epic}}'!"
-      when: epic or monumental|bool 
 
+  tasks:
     - debug:
         msg: saurabhthakre
       when: epic | bool
