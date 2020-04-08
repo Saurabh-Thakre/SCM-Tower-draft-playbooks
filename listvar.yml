@@ -3,8 +3,10 @@
   tasks:
     - set_fact:
         myvar: "{{ hostname | from_json }}"
-
+        
     - debug:
-        msg: "{{ hostname] }}"
+        msg: "{{ hostname }}"
       with_items: "{{ myvar }}"
                         
+set_fact:
+      test_bool : "{{  test_bool_flag|bool }}"
