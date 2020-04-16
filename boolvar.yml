@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
    - set_fact:
-       test_bool : "{{  test_bool|bool }}"
+       test_bool : "{{  test_bool | bool }}"
    - debug:
        var: test_bool
-     when: test_bool|bool
+     when: test_bool | bool
