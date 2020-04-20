@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  tasks:
+   - debug:
+     when: destroy
