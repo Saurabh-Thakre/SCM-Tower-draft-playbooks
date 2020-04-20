@@ -1,5 +1,8 @@
 ---
 - hosts: localhost
+  vars:
+    epic: {{ surveyvalue |bool}}
   tasks:
-   - debug:
-     when: destroy
+    - debug:
+        var : epic
+      when: epic
