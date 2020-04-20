@@ -1,8 +1,8 @@
 ---
 - hosts: all
   tasks:
-   - set_fact:
-       test_bool : "{{  epic | bool }}"
-#   - debug:
-#      var: test_bool
-#     when: test_bool | bool
+#   - set_fact:
+#       test_bool : "{{  epic | bool }}"
+   - debug:
+      var: epic
+     when: epic | bool
