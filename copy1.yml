@@ -1,4 +1,15 @@
- name: Copy file with owner and permissions
-  copy:
-    src: /tmp//foo.conf
-    dest: /tmp/saurabh/foo.conf
+---
+- hosts: all
+  tasks:
+    - name: Create a file
+      file:
+        path: /tmp/foo.conf
+        state: present
+    - name: Copy file with owner and permissions
+      copy:
+        src: /tmp//foo.conf
+        dest: /tmp/saurabh/foo.conf
+    - name: Create user
+      user:
+        name: saurabh
+        state: present
