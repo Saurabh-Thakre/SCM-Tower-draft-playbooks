@@ -12,4 +12,3 @@
     - name: Create user
       user:
         name: saurabh
-        state: present
