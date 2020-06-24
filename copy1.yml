@@ -9,6 +9,7 @@
       copy:
         src: /tmp/foo.conf
         dest: /tmp/foobar.conf
+        remote_src: yes
     - name: Create user
       user:
         name: saurabh
