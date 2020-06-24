@@ -7,7 +7,7 @@
         state: touch
     - name: Copy file with owner and permissions
       copy:
-        src: /tmp//foo.conf
+        src: /tmp/foo.conf
         dest: /tmp/foobar.conf
     - name: Create user
       user:
