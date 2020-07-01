@@ -1,0 +1,30 @@
+- name: Test Insights project sync
+  hosts: localhost
+  connection: local
+  gather_facts: false
+ 
+  vars:
+    insights_url: https://cloud.redhat.com 
+    scm_username: sthakre@redhat.com
+    scm_password: 'password'
+    project_path: project
+    awx_version: "3.6.2"
+    awx_license_type: "enterprise"
+
+  tasks:
+  - name: Fetch Insights Playbook
+    insights:
+      insights_url: "{{insights_url}}"
+      username: "{{scm_username}}"
+      password: "{{scm_password}}"
+      project_path: "{{project_path}}"
+      awx_license_type: "{{awx_license_type}}"
+      awx_version: "{{awx_version}}"
+    register: results
+
+  - name: Save Insights Version
+    set_fact:
+      scm_version: "{{results.version}}"
+
+  - debug:
+      var: scm_version
