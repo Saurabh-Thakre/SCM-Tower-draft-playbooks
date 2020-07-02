@@ -1,12 +1,8 @@
----
+--- 
 - hosts: all
   tasks:
-    - name: Create a file
-      file:
-        path: /tmp/foo.conf
-        state: touch
     - name: Copy file with owner and permissions
       copy:
         src: /tmp/foo.conf
-        dest: /tmp/foobar.conf
-        remote_src: yes
+        dest: /tmp/destination/foo.conf
+      delegate_to: "172.31.17.128"
