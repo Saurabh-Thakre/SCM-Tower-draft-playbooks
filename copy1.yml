@@ -5,4 +5,4 @@
       copy:
         src: /tmp/foo.conf
         dest: /tmp/destination/foo.conf
-      delegate_to: "172.31.17.128"
+      delegate_to: "{{ leo }}"
