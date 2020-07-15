@@ -1,6 +1,6 @@
 --- 
 - hosts: all
-  connection: local
+  #connection: local
   tasks:
     - name: Copy file with owner and permissions
       copy:
