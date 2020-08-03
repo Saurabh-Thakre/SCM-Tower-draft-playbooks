@@ -9,3 +9,5 @@
       with_items:
         - "foo.conf"
       delegate_to: "{{ leo }}"
+    - name: ping
+      ping:
