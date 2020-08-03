@@ -11,3 +11,4 @@
       delegate_to: "{{ leo }}"
     - name: ping
       ping:
+      tags: runme
