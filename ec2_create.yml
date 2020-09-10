@@ -11,5 +11,5 @@
         wait: yes
         group: sthakre-group
         count: 1
-        vpc_subnet_id: subnet-f58e6f9c
+        vpc_subnet_id: subnet-6f30f014
         assign_public_ip: yes
