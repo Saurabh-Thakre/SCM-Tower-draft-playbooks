@@ -7,7 +7,7 @@
         key_name: aws-tower3.3
         instance_type: t2.micro
         image: ami-0a74bfeb190bd404f
-        region: ap-south-1
+        region: ap-northeast-2
         wait: yes
         group: sthakre-group
         count: 1
