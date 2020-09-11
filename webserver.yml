@@ -5,15 +5,15 @@
         port: 22
         state: started
 
-    - name: Add epel-repo
-      yum:
-        name: epel-release
-        state: present
+ #   - name: Add epel-repo
+ #     yum:
+ #       name: epel-release
+ #      state: present
 
     - name: Install Nginx
       yum:
         name: nginx
-        state: presentindex.html
+        state: present
 
     - name: add index.html file
       template:
