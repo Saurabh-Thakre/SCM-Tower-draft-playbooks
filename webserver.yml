@@ -1,4 +1,4 @@
-- hosts: "{{ results.public_ip }}"
+- hosts: "{{ answer.public_ip }}"
   become: yes
   tasks:
     - name: Add epel-repo
