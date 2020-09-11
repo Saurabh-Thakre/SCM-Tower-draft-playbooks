@@ -13,3 +13,8 @@
         count: 1
         vpc_subnet_id: subnet-f58e6f9c
         assign_public_ip: yes
+      register: results
+    - name: "Artifact URL of test results to Tower Workflows"
+      set_stats:
+        data:
+          answer: "{{ (result }}"
