@@ -14,6 +14,7 @@
       template:
         src: /tmp/index.html
         dest: /usr/share/nginx/html/index.html
+      delegate_to: localhost
 
     - name: allow all access to tcp port 80
       firewalld:
