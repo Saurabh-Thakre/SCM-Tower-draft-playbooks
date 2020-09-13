@@ -1,8 +1,4 @@
 ---
 - hosts: all
-  gather_facts: yes
   tasks:
-   - name: saurabh
-     become: yes
-     become_user: root
-     ping:
+    - ping:
