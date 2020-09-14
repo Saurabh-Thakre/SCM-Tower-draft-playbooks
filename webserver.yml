@@ -4,16 +4,7 @@
  #   - name: Add epel-repo
  #     yum:
  #       name: epel-release
- #      state: present
-    - name: Wait for SSH to come up
-      wait_for:
-        host: "{{ item.private_ip }}" 
-        port: 22 
-        delay: 60
-        timeout: 320
-        state: started
-      with_items: '{{ results.instances }}'
-        
+ #      state: present     
     - name: Install Nginx
       yum:
         name: nginx
