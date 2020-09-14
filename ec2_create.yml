@@ -7,7 +7,7 @@
         key_name: aws-tower3.3
         instance_type: t2.micro
         instance_tags:
-          Name: "{{ Altisource-testing }}"
+          Name: "testing101"
         image: ami-0a74bfeb190bd404f
         region: ap-south-1
         wait: yes
