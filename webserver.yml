@@ -1,30 +1,15 @@
 - hosts: all
+  become: true
   tasks:
  #   - name: Add epel-repo
  #     yum:
  #       name: epel-release
  #      state: present
-    - name: Create the Tux User Account in AWS Instance
-      user:
-        name: tux
-        groups: "wheel"
-        create_home: true
-        comment: "tux penguin"
-        expires: -1
-        password: "{{ 'Password1' | password_hash('sha512', 'A512') }}" 
-    - name: Setup sudo Access for TUX in AWS Instance
-      copy:
-        dest: /etc/sudoers.d/tux
-        content: 'tux ALL=(ALL) NOPASSWD: ALL'
-        validate: /usr/sbin/visudo -cf %s
-    
     - name: Install Nginx
       yum:
         name: nginx
         state: present
-      become: yes
-      become_user: tux
-
+     
     - name: add index.html file
       copy:
         src: /tmp/index.html
