@@ -1,5 +1,5 @@
 ---
 - hosts: all
   tasks:
-    - name: Using WebHook 
+    - name: Using WebHooks
       ping:
