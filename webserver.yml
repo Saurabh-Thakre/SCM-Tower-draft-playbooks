@@ -1,15 +1,15 @@
 - hosts: all
+  become: true
   tasks:
  #   - name: Add epel-repo
  #     yum:
  #       name: epel-release
- #      state: present
-      
+ #      state: present     
     - name: Install Nginx
       yum:
         name: nginx
         state: present
-
+     
     - name: add index.html file
       copy:
         src: /tmp/index.html
