@@ -1,5 +1,5 @@
 ---
 - hosts: all
   tasks:
-    - name: Using WebHooks
+    - name: Using WebHooks in Ansible Tower
       ping:
