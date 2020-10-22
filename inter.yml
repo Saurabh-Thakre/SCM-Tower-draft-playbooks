@@ -1,0 +1,12 @@
+---
+- name: Setup
+  hosts: all
+  gather_facts: False
+  tasks:
+  - name: Ping
+    ping:
+
+  - name: Gathering Facts
+    setup:
+      gather_subset: "{{ facts_subset | default('all') }}"
+      gather_timeout: "{{ fact_timeout | default(10) }}"
