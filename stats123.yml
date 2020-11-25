@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  tasks:
+    - name: gather facts
+      debug:
+        var: "{{ inventory.hostname}}"
+
+
+    # Print as loop item
+    - name: Tower Response
+      set_fact:
+        dummy: value # Just to make some task without output
+      with_items:
+        - tower_response=>{{ tower_response | to_json }}<=
+    - name: Custom Response
+      set_stats:
+        data:
+          tower_response: "{{ tower_response | to_json }}"
