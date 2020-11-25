@@ -20,10 +20,5 @@
 
     - name: show job details for {{ job_id }}
       debug:
-        msg: "status={{ job_result.status }} json.host_status_counts {{ job_result.json.host_status_counts }} json.finished: {{ job_result.json.finished }} json.status: {{ job_result.json.status }}"
+        msg: "json.host_status_counts {{ job_result.json.host_status_counts }}"
     
-    - name: print host_status_count
-      debug:
-        msg: "{{ job_result.host_status_count }}"
-      ignore_errors: true
-
