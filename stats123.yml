@@ -24,4 +24,6 @@
     
     - name: print host_status_count
       debug:
-        msg: "{{ host_status_counts }}"
+        msg: "{{ job_result[host_status_counts] }}"
+      ignore_errors: true
+
