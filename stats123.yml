@@ -1,18 +1,23 @@
 ---
 - hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    tower_api_url: "https://52.66.208.105 "
+    tower_token: "wEuCjxA3TQ63iwFtxqQ8tshMkxGFEb"
   tasks:
-    - name: gather facts
+    - name: Check that tower job has finished
+      uri:
+        url: "{{ tower_api_url }}/api/v2/jobs/{{ tower_job_id }}/"
+        method: GET
+        validate_certs: no
+        status_code: 201, 200
+        headers:
+          Content-Type: application/json
+          Authorization: "Bearer {{ tower_token }}"
+      register: job_result
+      ignore_errors: true
+
+    - name: print job_result
       debug:
-        var: "{{ inventory.hostname}}"
-
-
-    # Print as loop item
-    - name: Tower Response
-      set_fact:
-        dummy: value # Just to make some task without output
-      with_items:
-        - tower_response=>{{ tower_response | to_json }}<=
-    - name: Custom Response
-      set_stats:
-        data:
-          tower_response: "{{ tower_response | to_json }}"
+        msg: "{{ job_result['status'] }} {{ 'failed' if job_result['failed'] else job_result['json']['status'] }}"
