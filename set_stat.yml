@@ -1,7 +1,7 @@
 ---
-- hosts: all
+- hosts: localhost
   tasks:
     - name: "Artifact URL of test results to Tower Workflows"
-    set_stats:
-      data:
-        my_tower_job_id:  "{{ tower_job_id }}"
+      set_stats:
+        data:
+          my_tower_job_id:  "{{ tower_job_id }}"
