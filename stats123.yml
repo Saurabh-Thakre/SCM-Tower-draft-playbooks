@@ -18,12 +18,12 @@
       register: job_result
       ignore_errors: true
 
-    - name: print job_result
+    - name: show job details for {{ job_id }}
       debug:
-        msg: "{{ job_result['host_status_counts'] }} {{ 'failed' if job_result['failed'] else job_result['json']['status'] }}"
+        msg: "status={{ job_result.status }} json.host_status_counts {{ job_result.json.host_status_counts }} json.finished: {{ job_result.json.finished }} json.status: {{ job_result.json.status }}"
     
     - name: print host_status_count
       debug:
-        msg: "{{ job_result['json']['host_status_counts'] }}"
+        msg: "{{ job_result.host_status_count }}"
       ignore_errors: true
 
