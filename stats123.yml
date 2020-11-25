@@ -20,10 +20,10 @@
 
     - name: print job_result
       debug:
-        msg: "{{ job_result['status'] }} {{ 'failed' if job_result['failed'] else job_result['json']['status'] }}"
+        msg: "{{ job_result['host_status_counts'] }} {{ 'failed' if job_result['failed'] else job_result['json']['status'] }}"
     
     - name: print host_status_count
       debug:
-        msg: "{{ job_result['host_status_counts'] }}"
+        msg: "{{ job_result['json']['host_status_counts'] }}"
       ignore_errors: true
 
