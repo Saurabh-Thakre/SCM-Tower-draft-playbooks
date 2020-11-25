@@ -1,8 +1,7 @@
 ---
 - hosts: all
   tasks:
-    - name: using set_stat module
-      set_stats:
-        data: 
-          foo: bar
-        per_host: no
+    - name: "Artifact URL of test results to Tower Workflows"
+    set_stats:
+      data:
+        my_tower_job_id:  "{{ tower_job_id }}"
