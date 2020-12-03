@@ -1,6 +1,7 @@
 ---
 - name: Ansible test
   hosts: localhost
+  connection: local
   tasks:
     - name: launching AWS instance using Ansible
       ec2:
