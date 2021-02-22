@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: get role
+      shell:  ssh root@172.31.9.137 ; cat /etc/ansible/ansible.cfg
