@@ -3,8 +3,7 @@
   hosts: all
   collections:
     - ansible.tower
-  tasks:
+  tasks:    
     - name: Export all inventories
       tower_export:
-        job_template: "Ping"
-        credential: 'all'
+        inventory: 'all'
