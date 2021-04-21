@@ -4,9 +4,6 @@
   collections:
     - ansible.tower
   tasks:
-    - tower_job_list:
-        status: successful
-        tower_host: localhost
-        tower_username: admin
-        tower_password: "{{ passoword }}"
-        validate_certs: no
+    - name: Export all inventories
+      tower_export:
+        inventory: 'all'
