@@ -6,5 +6,5 @@
   tasks:
     - name: Export all inventories
       tower_export:
+        job_template: "Ping"
         credential: 'all'
-      
