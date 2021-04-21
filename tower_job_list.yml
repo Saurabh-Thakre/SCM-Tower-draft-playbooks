@@ -1,0 +1,12 @@
+---
+- name: tower_job_list module
+  hosts: all
+  collections:
+    - ansible.tower
+  tasks:
+    - tower_job_list:
+        status: successful
+        tower_host: localhost
+        tower_username: admin
+        tower_password: "{{ passoword }}"
+        validate_certs: no
