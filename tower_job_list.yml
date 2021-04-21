@@ -7,6 +7,4 @@
     - name: Export all inventories
       tower_export:
         credential: 'all'
-      tower_username: admin
-      tower_password: "{{passoword}}"
-      validate_certs: no
+      
