@@ -3,6 +3,7 @@
   hosts: all
   collections:
     - ansible.tower
+    - awx.awx
   tasks:    
     - name: Export all inventories
       tower_export:
