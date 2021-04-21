@@ -8,3 +8,4 @@
     - name: Export all inventories
       tower_export:
         all: True
+        validate_certs: no
