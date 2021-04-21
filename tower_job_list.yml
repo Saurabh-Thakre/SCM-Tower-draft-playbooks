@@ -6,4 +6,8 @@
   tasks:
     - name: Export all inventories
       tower_export:
-        inventory: 'all'
+        credential: 'all'
+      tower_host: localhost
+      tower_username: admin
+      tower_password: "{{passoword}}"
+      validate_certs: no
