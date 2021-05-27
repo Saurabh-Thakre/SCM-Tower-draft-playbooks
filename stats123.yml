@@ -3,8 +3,8 @@
   connection: local
   gather_facts: no
   vars:
-    tower_api_url: "https://13.235.42.148"
-    tower_token: "wEuCjxA3TQ63iwFtxqQ8tshMkxGFEb"
+    tower_api_url: "https://13.127.80.65"
+    tower_token: "19noBgDcGQsp5lS6B16DN7Yc91GpMc"
   tasks:
     - name: Check that tower job has finished
       uri:
